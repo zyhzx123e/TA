@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Master pages/basic.master" AutoEventWireup="true" CodeFile="main.master.cs" Inherits="Master_pages_main" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <asp:ContentPlaceHolder id="page_head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="userMenuContent" Runat="Server">
+    <span >
+
+        <div style="width:70%;
+font-family:fantasy;
+ 
+  float:left;
+  padding-left:0;">
+     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+     
+  <h4>  <asp:PlaceHolder ID="place_indication" runat="server"></asp:PlaceHolder></h4>
+            <asp:Timer ID="Timer1" runat="server" Interval="888" OnTick="indication"></asp:Timer>
+        </ContentTemplate>
+</asp:UpdatePanel>
+            </div>
+
+     <div class="dropdown" style="width:30%;
+  float:right;
+  padding-left:0;">
+      <asp:Button ID="userMenu_btn" CausesValidation="false" CssClass="btn btn-default dropdown-toggle upDownMargin" Text="nothing" data-toggle="dropdown" runat="server" /><span class="caret"></span>
+      <ul class="dropdown-menu">
+           <li><a href="~/pages/common/Home.aspx" runat="server">Home</a></li>
+            <li><a href="~/SimpleChat/Default.aspx" runat="server">chat online</a></li>
+           <li><a href="~/pages/common/View profile.aspx" runat="server">My Profile</a></li>
+           <li><a href="~/pages/common/Change password.aspx" runat="server">Reset Password</a></li>
+          
+           <li><a href="~/pages/common/Sign out.aspx" runat="server">Sign Out</a></li>
+    
+            </ul>
+    </div></span>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="content" Runat="Server">
+    <%--<div class="row">--%>
+        <!-- left menu starts -->
+   <!-- 
+       
+       "btn-group-vertical" role="group" aria-label="..."
+       "navbar col-md-2 col-sm-4 col-xs-5 functionsList btn-success"
+        -->
+        <aside class="btn-group-vertical functionsList col-md-3 col-sm-5 col-xs-6" role="menu"  >
+            <asp:BulletedList ID="userFucntionsList" CssClass="nav nav-pills nav-stacked" runat="server" DisplayMode="HyperLink" BulletStyle="UpperAlpha"  >
+            </asp:BulletedList>
+        </aside>
+    
+        <!-- Page content starts -->
+        <div class="col-md-9 col-sm-7 col-xs-6 borderTest downMargin" id="pageParentDiv">
+            <asp:ContentPlaceHolder id="pageContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Page content ends -->  
+    <%--</div>--%>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="pageScripts" Runat="Server">
+    <!-- scripts of the pages goes here -->
+    <asp:ContentPlaceHolder id="scripts" runat="server">
+
+    </asp:ContentPlaceHolder>
+</asp:Content>

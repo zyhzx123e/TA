@@ -1,0 +1,81 @@
+﻿body {}
+
+
+p, h1, h2, h3 { font-family:Tahoma; }
+
+.container { width:97%; padding:0; margin:auto; }
+.border { border:1px black solid; margin-top:5px; }
+.contentBox { margin:20px auto;}
+.horizontal { display:inline; }
+.upDownMargin { margin:20px auto; }
+.hdden { display:none; }
+.tableHeader { text-align:center; }
+.forceInline { display:inline-table; margin:5px 5px; }
+.blackCell { background-color:black; }
+.greenCell { background-color:green; }
+.myfooter { margin-top:20px; }
+.downMargin { margin-bottom: 30px; }
+.listItems { margin-bottom: 30px; color:red; }
+.warningLbl { margin:5px; color:salmon; }
+.functionsList  { margin-top:5px; margin-bottom:35px; }
+.functionsList a { border:1px black solid; font-size:12px;  color:black; padding:0px; margin:0px; }
+.functionsList a:hover { color:black; background-color:red; }
+/* header */
+#headerContainer { 
+    height:80px;  border:1px black solid; background-color:black; color:white; 
+}
+
+    #logo { height:75px; }
+    #logo img { height:100%; width:auto; display:block; border:1px solid gray; border-radius:20px; }
+
+    #userMenu   { height:75px; }
+
+
+/* page body */
+#pageBody {  }
+
+/* footer */
+#footerContainer { border:1px black solid; background-color:black; color:white; }
+#footerContainer p { width:100%; text-align:center; margin:0px;  }
+
+/* Login page */
+#loginForm { margin:30px auto; padding:25px 10px; }
+
+/* extra styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+/* Pop up forms */
+.popForm { border:1px solid black; padding:100px; border-radius:20px; background-color:lightblue; }
+
+
+#troubleshootForm { display:none;
+    background-color:red;
+}
+#troubleshootBtn { display:none; }
+
+#problemDetailsDiv { border:1px black solid; border-radius:20px; padding-bottom:10px; }
+#problemDetailsDiv  h3 { text-align:center; }
+
+.systemPanel { margin:2px; }
+.systemPanel h3 { text-align:center; margin:5px; }
+.systemPanel button { margin:3px; }
+.systemPanel img { width:150px; height:150px; margin:0 auto; display:block; border:1px black solid; border-radius:25px;  }
+
+.frontImage { width:100px; height:100px;  margin:0 auto; display:block; }
+
+#srollableTableDiv {  overflow:scroll; height:60vh; }
+
+.dashboardDivs { display:inline; }
+
+#reportDiv { margin:10px; border:1px red solid; height:60vh; overflow:scroll; }
+#reportMsgDiv h3 { width:100%; text-align:center; color:red; }
